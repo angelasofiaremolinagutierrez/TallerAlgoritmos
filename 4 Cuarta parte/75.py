@@ -1,14 +1,34 @@
 print("Binario a octal")
-bcd = int(input("Ingrese el número binario de TRES DIGITOS O MENOS: "))
-b = int(bcd/100)
-cd = int(bcd-(b*100))
-c = int(cd/10)
-d= int(cd - (c*10))
+num = input("Ingrese un número binario: ")
+#lo volvemos decimal
+digitos=len(num)
+exp = 0 #contador exponentes
+suma = 0
+for x in range(1,digitos+1):
 
-p=b*(2**2)
-q=c*(2**1)
-r=d*(2**0)
-
-suma = p+q+r
+    m1 = int(num[-x])
+    m2= 2**exp
+    s = m1*m2
+    suma = suma + s
+    exp = exp+1
 
 print (suma)
+#luego de decimal a octal
+residuos= []
+residuos_inv = []
+if suma==0:
+  print("Su número en octal es:")
+  print(suma)
+else:
+  while suma != 0 :
+    r = suma%8
+    residuos.append(r)
+    suma = int(suma/8)
+
+  for x in reversed(residuos):
+    strx= str(x) # es necesario pasar la x a string para que luego se pueda hacer el “join”
+    residuos_inv.append(strx)
+
+  str_lista = "".join(residuos_inv)
+  print("Su número en octal es:")
+  print(str_lista)

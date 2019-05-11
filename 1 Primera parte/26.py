@@ -1,15 +1,48 @@
-#||=or &&=and
-a = int(input("Escriba un número")#2
-b = int(input("Escriba otro número")#-8
+print("Esriba T si la afirmacion es verdadera y F si es falsa")
+print()
+print("True OR False")
+r= input("?")
+if r.lower() == "t":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
 
-if a>0 or a<0 :
-    print("True || False") #true
+print()
+print("False OR False")
+r= input("?")
+if r.lower() == "f":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
 
-IDK
+print()
+print("True AND True")
+r= input("?")
+if r.lower() == "t":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
 
-#print("True || False") #true
-print("False || False") #false
-print("True && True") #true
-print("False && True") #false
-print("(False && False)||(True && True)") #false or true = TRUE
-print("(False || False)&&(True && True)") #false and true = FALSE
+print()
+print("False AND True")
+r= input("?")
+if r.lower() == "f":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
+
+print()
+print("(False AND False) OR (True AND True)") #false or true = TRUE
+r= input("?")
+if r.lower() == "t":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
+
+print()
+print("(False OR False) AND (True AND True)") #false and true = FALSE
+r= input("?")
+if r.lower() == "f":
+    print ("Correcto :)")
+else:
+    print ("Incorrecto :(")
